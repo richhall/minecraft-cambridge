@@ -1,0 +1,14 @@
+texture_size = 12
+image_format = png
+lighting_intensity = 1
+cave_high_contrast = true
+render_unknown_blocks = false
+render_leaves_transparent = true
+render_biomes = true
+max_zoom = 6
+
+[rotation:tl]
+last_render = 1426898994
+tile_offset_x = 9005
+tile_offset_y = -12560
+
