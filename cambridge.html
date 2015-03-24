@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Minecraft Map</title>
+		<meta name="generator" content="Mapcrafter 1.5.4 (v.1.5.4)" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+		<link rel="stylesheet" href="static/leaflet/leaflet.css" />
+		<script src="static/leaflet/leaflet.js"></script>
+		<style type="text/css">
+		.leaflet-container {
+			background: #DDDDDD;
+		}
+		</style>
+		
+		<script type="text/javascript" src="static/js/handler/base.js"></script>
+		<script type="text/javascript" src="static/js/handler/marker.js"></script>
+		<script type="text/javascript" src="static/js/handler/poshash.js"></script>
+		<script type="text/javascript" src="static/js/handler/rotationselect.js"></script>
+		<script type="text/javascript" src="static/js/control/base.js"></script>
+		<script type="text/javascript" src="static/js/control/html.js"></script>
+		<script type="text/javascript" src="static/js/control/mapselect.js"></script>
+		<script type="text/javascript" src="static/js/control/marker.js"></script>
+		<script type="text/javascript" src="static/js/control/mousepos.js"></script>
+		<script type="text/javascript" src="static/js/control/rotationselect.js"></script>
+		<script type="text/javascript" src="static/js/mapcrafterui.js"></script>
+
+		<!-- Last update 20.03.2015, 23:57:39 -->
+		<script type="text/javascript">
+		var CONFIG = {
+"Cambridge_MakerChallenge" : {
+	name: "Cambridge_MakerChallenge",
+	world: "Cambridge_MakerChallenge",
+	worldName: "Cambridge_MakerChallenge",
+	textureSize: 12,
+	tileSize: 384,
+	maxZoom: 9,
+	imageFormat: "png",
+	rotations: [0,],
+	tileOffsets: [[8999, -12558], [0, 0], [0, 0], [0, 0], ],
+	defaultZoom: 4,
+},
+		};
+		</script>
+		<script type="text/javascript" src="markers.js"></script>
+		<script type="text/javascript" src="markers-generated.js"></script>
+		<script type="text/javascript">
+		var Mapcrafter = new MapcrafterUI(CONFIG);
+
+		function init() {
+			Mapcrafter.init();
+			
+			Mapcrafter.addControl(new MapSelectControl(), "topright", 1);
+			Mapcrafter.addControl(new RotationSelectControl(), "topright", 3);
+			Mapcrafter.addControl(new MousePosControl(), "bottomleft", 1);
+
+			// merge the two marker configurations
+			var markers = [];
+			if(typeof MAPCRAFTER_MARKERS !== "undefined")
+				for(var i = 0; i < MAPCRAFTER_MARKERS.length; i++)
+					markers.push(MAPCRAFTER_MARKERS[i]);
+			if(typeof MAPCRAFTER_MARKERS_GENERATED !== "undefined")
+				for(var i = 0; i < MAPCRAFTER_MARKERS_GENERATED.length; i++)
+					markers.push(MAPCRAFTER_MARKERS_GENERATED[i]);
+			// only create marker control if marker groups exist
+			if(markers.length > 0)
+				Mapcrafter.addControl(new MarkerControl(markers), "topright", 2);
+		}
+		</script>
+	</head>
+	<body onload="init()">
+		<div id="mcmap"></div>
+	</body>
+</html>
