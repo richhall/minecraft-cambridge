@@ -27,7 +27,7 @@ yourself. Check http://minecraft.pravigo.org for details.
 ##On Windows: 
 Start -> run and type
 %appdata%\.minecraft\saves
-and unzip the Cambridge_MakerChallenge.zip
+and copy the unzipped Cambridge_MakerChallenge folder into it
 
 It has been tested on Mac and Linux -feel free to edit this page and add
 instructions.
