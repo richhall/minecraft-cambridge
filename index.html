@@ -35,6 +35,7 @@
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/richhall/Minecraft-Cambridge/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/richhall/Minecraft-Cambridge/tarball/master">Download this project as a tar.gz file</a>
+			  <p>Download size: 172Mb</p>
             </section>
         </header>
     </div>
@@ -59,40 +60,44 @@ Roads paths and building data from OpenStreetMap <a href="http://www.openstreetm
 <li>QGIS - to process the raw heightmap data <a href="http://www2.qgis.org">http://www2.qgis.org</a></li>
 <li>More QGIS - to filter and rasterize the OpenStreetMap into various masks to try to identify buildings, roads, railways, water and trees (railway to follow) <a href="http://www2.qgis.org">http://www2.qgis.org</a></li>
 <li>ImageMagick - to do some conversion on the exported map images (tif to png) <a href="http://www.imagemagick.org/">http://www.imagemagick.org/</a></li>
-<li>Paint.NET - to tidy up by hand the generated masks (I clearly could have done more here!) <a href="http://www.getpaint.net/index.html">http://www.getpaint.net/index.html</a> </li>
+<li>Paint.NET (not open source but free to download)- to tidy up by hand the generated masks (I clearly could have done more here!) <a href="http://www.getpaint.net/index.html">http://www.getpaint.net/index.html</a> </li>
 <li>WorldPainter (with scripting) - to create a terrain from the heightmap and masks <a href="http://worldpainter.net">http://worldpainter.net</a> </li>
 <li>MCEdit - not used in the final version but could be used to improve the model - e.g. replace the tree height data with nice minecraft trees. <a href="http://www.mcedit.net/">http://www.mcedit.net/</a></p></li>
-<li>MapCrafter - to create a <a href="map.html#MillRoad_MakerChallenge/0/2/546153/-257904/64">SimCity style view</a>.  Full City map to follow. <a href=" http://mapcrafter.org/index">http://mapcrafter.org/index</a>  </li>
+<li>MapCrafter - to create a <a href="cambridge.html">SimCity style view</a>. <a href=" http://mapcrafter.org/index">http://mapcrafter.org/index</a>  </li>
 </ul>
 <h3>
 <a id="questions-and-answers" class="anchor" href="#questions-and-answers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions and Answers</h3>
 
-<p>Q How big is the map?
+<p>Q How big is the map?<br/>
 A The surface is 64 million square metres.  Each Minecraft block is a metre.
 It corresponds to OS coordinates 542000,254000 : 550000,262000.  However, facing due North in Minecraft is a negative value so just stick a minus in front of the northing value and you should get to the right place. There are online tools to give eastings and northings from postcodes if you want to find a specific area.</p>
 
 <p>Q Why are some areas missing - just showing roads cut away?<br>
 A It's nothing personal - this is where LIDAR data wasn't available.  I think the roads are mapped at sea level so good for getting a feel for altitude of the terrain</p>
 
-<p>Q. Why are some buildings green or not there at all?
+<p>Q. Why are some buildings green or not there at all?br/>
 A. The LIDAR data is up to a few years old so it is likely that the OpenStreetMap view is more up to date.  Alternatively the OSM data could be not accurate to the building edges.</p>
 
-<p>Q. Why are some edges of buildings missing?
+<p>Q. Why are some edges of buildings missing?<br/>
 A. The building edges have been "trimmed" a bit to improve the definition of building edges.  You can build them back..</p>
 
-<p>Q. Can I get a copy of the Minecraft model?
-A. We're looking to make it available along with the recipe to build your own - just need to check licensing details.</p>
+<p>Q. Can I get a copy of the Minecraft model?<br/>
+A. Yes. Use the download link at the top of the page or see <a href="https://github.com/richhall/Minecraft-Cambridge">https://github.com/richhall/Minecraft-Cambridge</a></p>
 
-<p>Q. Why aren't the bridges tunnelled through?
+<p>Q. What game mode does it use?<br/>
+A. Single player creative mode.</p>
+
+
+<p>Q. Why aren't the bridges tunnelled through?<br/>
 A. Some things are best done in the game.  Improve an existing river crossing or create your own.</p>
 
-<p>Q. Why is the railway missing?
+<p>Q. Why is the railway missing?<br/>
 A. It was next on the to do list.  Why not build your own transportation system? Underground? :)</p>
 
-<p>Q. Why so much red brick?
+<p>Q. Why so much red brick?<br/>
 A. It was on the to do list to vary the building materials - feel free to do this in game.</p>
 
-<p>Q. What are the holes and bumps in the road?
+<p>Q. What are the holes and bumps in the road?<br/>
 A. Probably not potholes.  Mostly terrain changes or vehicles captured by the LIDAR.  The next version of the map will have half slabs to smoothen out the experience on foot.</p>
 
 <h3>
@@ -172,6 +177,12 @@ should get you to virtual reality checkpoint.  The 100 is a height value so you'
 <a id="Take a picture" class="anchor" href="#picture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Take a picture</h4>
 
 <p>Seen something you like? - Hit "F2" to take a picture.</p>
+
+<h4>
+<a id="Get Involved" class="anchor" href="#getinvolved" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Involved</h4>
+<p>It is an early prototype and there is lot that could be improved.  Help us by highlighting the stuff that needs fixing or give us your suggestions for
+the next version.  You can contact us by <a href="https://github.com/richhall/minecraft-cambridge/issues">raising an issue on GitHub</a> or 
+emailing us at minecraft@collusion.org.uk .  We plan to release the corresponding WorldPainter maps and tutorials shortly.</p>
 
 <p><img src="images/jesus_green.png" width="100%" alt="view of Jesus Green rendered by MapCrafter" ></img></p>
 
