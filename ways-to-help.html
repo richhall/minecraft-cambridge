@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Minecraft-cambridge : Info for Collusion Maker Challenge: http://www.collusion.org.uk/Maker-Challenge">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">	
+		
+    <title>Minecraft-cambridge</title>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61025480-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+
+ <body >
+		
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/richhall/Minecraft-Cambridge">View on GitHub</a>
+
+          <h1 id="project_title"><a href="/">Minecraft-cambridge</a></h1>
+          <h2 id="project_tagline">Info for Collusion Maker Challenge: <a href="http://www.collusion.org.uk/Maker-Challenge">http://www.collusion.org.uk/Maker-Challenge</a></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/richhall/Minecraft-Cambridge/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/richhall/Minecraft-Cambridge/tarball/master">Download this project as a tar.gz file</a>
+			  <p>Download size: 172Mb</p>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3><a id="ways-to-help" class="anchor" href="#ways-to-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ways you can help</h3>
+
+		<h4><a id="spot-the-difference" class="anchor" href="#spot-the-difference" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Spot the difference - Tell us what's wrong with the map</h4>
+<p>
+Find something that isn't quite right.  Then take a picture and let us know via one of the following:
+<ul>
+<li>send it to minecraft@collusion.org.uk </li>
+<li>tweet with hashtag #minecraft_cambridge</li>
+<li><a href="https://github.com/richhall/minecraft-cambridge/issues">raise an issue on GitHub</a></li>
+</ul>
+including the location.
+
+eg. 
+<pre>/tp 546488 100 -259374</pre>
+The museum of technology isn't made of mud and bare grass! <br/>
+<img src="images/museum-of-technology.png" width="100%" alt="minecraft view of the museum of technology" ></img><br/>
+<pre>/tp 545349 172 -257184</pre></br>
+Water missing from the lakes in the Botanic Gardens (and lake too deep?)<br/>
+<img src="images/botanic-gardens.png" width="100%" alt="minecraft view of Botanic gardens lake" ></img><br/>
+
+If you have a photo of what it should look like then even better:
+<pre>/tp 544835 100 -258459</pre><br/>
+View of the market from Great St Mary's looks like this:
+<img src="images/market-square.png" width="100%" alt="minecraft view of the market square" ></img><br/>
+but should be more like this:</br>
+<img src="images/GrtStMarys.png" width="100%" alt="photo of the market square" ></img><br/>
+
+</p>
+
+<h4><a id="ahre-ideas" class="anchor" href="#share-ideas" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Share your ideas for improving the world</h4>
+<p>Our project needs:</p>
+<h5>"Urban foresters"</h5><p>We've done a reasonable job of identifying trees but not a very good job so far of rendering them (earth for tree trunks is rubbish).
+I had a few ideas about trees:
+<ul>
+<li>Get the GPS trackers out and plot the significant trees on OSM.  Some are there already:
+<img src="images/OSM-trees.png" width="100%" alt="trees in OpenStreetMap" ></img>
+  There are also some other tree mapping initiatives out there such as <a href="http://www.treezilla.org/">http://www.treezilla.org/</a> and the Woodland Trust's <a href="http://www.ancient-tree-hunt.org.uk/">Ancient Tree Hunt</a> website (good content on an appropriately ancient web site).  Also the City council probably has its tree preservation orders mapped so
+  could release that as Open Data.  If the trees are mapped then a script could be written to replace the tree LIDAR height data with an appropriate Minecraft tree such as those in <a href="http://www.planetminecraft.com/project/native-trees-of-europe-template-repository-1779952/"> lentebriesje's custom tree repository</a></li>
+<li>Do some more work processing on the LIDAR data to guess the trunk locations.</li>
+<li>Where an area is wooded use a custom layer of trees in WorldPainter that broadly matches the density of the LIDAR data</li>
+  </ul>
+I'd love some more input on this.  LIDAR data is increasingly used in forestry and the processed LIDAR data allows you to filter, for example, all the areas with trees over 10 metres.  If nothing else, playing with this data makes you notice and appreciate the trees in the city.
+<h5>"Civil Engineers"</h5><p>To include the railway, airport and improve the rendering of streets and paths from OSM data.  Broadly speaking roads are currently rendered as 15 metres wide and paths/cycleways 3 metres.  If you know your way around OpenStreetMap you can probably help refine this.  I'm not sure I got my filters right..</p>
+<h5>"Construction workers"</h5><p>I always planned to write some code to hollow out the buildings.  This could be done by customising WorldPainter or writing a script (perhaps for MCEdit).  I'll probably put a coding challenge up for this.
+Also so much building work has gone on in recent years that many newer builds are missing.  So these need to be identified and added one way or another (see missing data).  As it stands it is an interesting 3D snapshot of a rapidly changing cityscape. At street level the buildings are very abstract.  I'd like to try some street-level LIDAR to improve this.  Any thoughts in this area appreciated.
+ If only I could borrow a LIDAR sensor from my local library for a couple of weeks..</p>
+<h5>"Water managers"</h5><p>Identifying all the waterways and making sure the water is where it is supposed to be in the minecraft world.  Also -any flood and water management experts to help assess whether the minecraft world can help us tell a story about flooding and water.</p>
+<h5>"Bridge builders"</h5><p>I think we can identify and hollow out the bridges in code but making them look nice might need to be done in game.</p>
+<h5>A solution for missing data</h5><p>Where the LIDAR data is incomplete a few options spring to mind:
+<ul>
+<li>Borrow the <a href="http://vizicities.com/">Vizicities</a> approach and render the buildings from OSM data (and contribute crowd sourced building height data to OSM)</li>
+<li>Find someone with a LIDAR sensor</li>
+<li>Find a pilot with an aircraft and stick a LIDAR sensor on it</li>
+<li>Find a someone with a drone/quadcopter and stick a LIDAR sensor on it</li>
+</ul>
+An open LIDAR dataset on <a href="http://www.cambridgeshireinsight.org.uk">Cambridgeshire Insight</a> would be awesome.  If you can help with any of the above then get in touch.</p>
+<h5>Raspberry Pi</h5><p>I am sure we can get Minecraft Cambridge working on the PI.  If you can help with that then let us know.</p>
+<h5>Coding clubs</h5><p>If you are involved in a coding club and think you can use Minecraft-Cambridge then get in touch.</p>
+<h5>Gamers</h5><p>We made a model in Minecraft - but we didn't make a game.  There are no resources under the map and at ground level everything is a bit confusing.
+So ideas on how to make a playable city.</p>
+<h5>Competitors and Colluders</h5><p>The point of the prototype is that it should scale (at least in the UK).  So if you aren't in Cambridge you should be able to follow the steps we took (to be published shortly).</p>
+<h5>You</h5><p>If you want to be involved contact us at minecraft@collusion.org.uk</p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+<br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">Minecraft Cambridge</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.collusion.org.uk/Maker-Challenge#MinecraftCambridge" property="cc:attributionName" rel="cc:attributionURL">Collusion Maker Challenge Team 2</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<br />Based on works at <a xmlns:dct="http://purl.org/dc/terms/" href="http://data.gov.uk/dataset/lidar-digital-surface-model" rel="dct:source">http://data.gov.uk/dataset/lidar-digital-surface-model</a>
+and <a xmlns:dct="http://purl.org/dc/terms/" href="http://www.openstreetmap.org/copyright" rel="dct:source">OpenStreetMap</a>
+.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.geomatics-group.co.uk/GeoCMS/Homepage.aspx" rel="cc:morePermissions">https://www.geomatics-group.co.uk/GeoCMS/Homepage.aspx</a>.
+      </section>
+
+	  </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Minecraft-cambridge maintained by <a href="https://github.com/richhall">richhall</a></p>
+		<p>Collusion Maker Challenge Team 2 is: Beverley Carpenter, Richard Hall, Kim Spence-Jones, Michal Stefanow and Helen Weinstein.
+	
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+
+
+  </body>
+</html>
